@@ -1,6 +1,36 @@
-import React from 'react'
+import React from 'react';
+import Transaction from './Transaction';
 
-const TransactionsList = () => {
+const TransactionsList = (props) => {
+  let transactions = props.transactions
+
+  const renderTransactions = () => {
+    if (props.query === "") {
+      return transactions.map(transaction =>
+        {return ( <Transaction key={transaction.id} transaction={transaction}/>
+          // <tr key={transaction.id}>
+          //   <td>{transaction.posted_at}</td>
+          //   <td>{transaction.description}</td>
+          //   <td>{transaction.category}</td>
+          //   <td>{transaction.amount}</td>
+          // </tr>
+        )}
+      )
+    } else {
+      let queried = transactions.filter(transaction => transaction.description.toLowerCase().includes(props.query.toLowerCase()) || transaction.category.toLowerCase().includes(props.query.toLowerCase()))
+      return queried.map(transaction =>
+        {return ( <Transaction key={transaction.id} transaction={transaction}/>
+          // <tr key={transaction.id}>
+          //   <td>{transaction.posted_at}</td>
+          //   <td>{transaction.description}</td>
+          //   <td>{transaction.category}</td>
+          //   <td>{transaction.amount}</td>
+          // </tr>
+        )}
+      )
+    }
+
+  }
 
   return (
     <table className="ui celled striped padded table">
@@ -28,7 +58,8 @@ const TransactionsList = () => {
           </th>
         </tr>
 
-        {"... your code here..."}
+        {/* {"... your code here..."} */}
+        {renderTransactions()}
 
       </tbody>
     </table>
