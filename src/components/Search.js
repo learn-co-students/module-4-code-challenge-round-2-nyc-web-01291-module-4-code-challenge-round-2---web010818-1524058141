@@ -1,15 +1,20 @@
 import React from 'react'
 
-const Search = () => {
-  return (
-    <div className="ui huge fluid icon input">
-      <input
-        type="text"
-        placeholder={"Search your Recent Transactions"}
-      />
-      <i className="circular search link icon"></i>
-    </div>
-  )
+class Search extends React.Component {
+
+
+  render(){
+    return (
+      <div className="ui huge fluid icon input">
+        <input
+          onChange = {this.props.handleSearch}
+          type="text"
+          placeholder={"Search your Recent Transactions"}
+        />
+        <i className="circular search link icon"></i>
+      </div>
+    )
+  }
 }
 
 export default Search
