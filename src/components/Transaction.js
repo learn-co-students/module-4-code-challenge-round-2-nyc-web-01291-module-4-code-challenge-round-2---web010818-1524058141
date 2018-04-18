@@ -1,14 +1,19 @@
 import React from 'react'
 
-const Transaction = () => {
-  return (
-    <tr>
-      <td>{"...your code here"}</td>
-      <td>{"...your code here"}</td>
-      <td>{"...your code here"}</td>
-      <td>{"...your code here"}</td>
-    </tr>
-  )
+class Transaction extends React.Component {
+
+  render() {
+
+    return (
+      <tr>
+        <td>{this.props.transactionInfo.posted_at}</td>
+        <td>{this.props.transactionInfo.description}</td>
+        <td>{this.props.transactionInfo.category}</td>
+        <td>{this.props.transactionInfo.amount}</td>
+      </tr>
+    )
+  }
+
 }
 
 export default Transaction
