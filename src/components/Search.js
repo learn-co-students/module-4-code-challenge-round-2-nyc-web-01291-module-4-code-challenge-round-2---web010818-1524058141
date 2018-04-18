@@ -1,15 +1,14 @@
 import React from 'react'
 
-const Search = () => {
-  return (
-    <div className="ui huge fluid icon input">
-      <input
-        type="text"
-        placeholder={"Search your Recent Transactions"}
-      />
-      <i className="circular search link icon"></i>
-    </div>
-  )
+class Search extends React.Component{
+  constructor(){
+    super()
+  }
+
+  render(){
+    return()
+  }
 }
+
 
 export default Search

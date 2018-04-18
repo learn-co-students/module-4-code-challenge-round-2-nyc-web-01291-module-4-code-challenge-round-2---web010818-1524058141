@@ -13,7 +13,9 @@ When you clone down this project, the component `<AccountContainer />` will be i
 
 **Please implement the following user stories:**
 - As a user, you should be able to see a table of transactions.
+[DONE]
 - As a user, you should be able to enter text into an input field and dynamically filter the list of transactions by either description or category as you type.
+[DONE]
 
 ![example project](https://s3-us-west-2.amazonaws.com/curriculum-content/immersive_assessments/react-challenge.gif)
 
